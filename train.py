@@ -21,11 +21,7 @@ if __name__ == '__main__':
         iter_data_time = time.time()
         epoch_iter = 0
 
-        for i, data in enumerate(dataset):
-            if i % 2 == 0:
-                opt.direction = 'AtoB'
-            else:
-                opt.direction = 'BtoA'            
+        for i, data in enumerate(dataset):          
             iter_start_time = time.time()
             if total_steps % opt.print_freq == 0:
                 t_data = iter_start_time - iter_data_time
